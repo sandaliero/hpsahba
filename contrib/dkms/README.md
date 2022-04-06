@@ -17,11 +17,11 @@ Add the dkms module to the tree
 
 And then you can install it.
 
-    sudo dkms install --force hpsa-dkms/1.0
+    sudo dkms install hpsa-dkms/3.4.20-201
 
 When running in a chroot you have to manually set the kernel version
 
-    dkms install --force -k 4.19.0-9-amd64 hpsa-dkms/1.0
+    dkms install -k 4.19.0-9-amd64 hpsa-dkms/3.4.20-201
 
 After that is done, unload the old hpsa driver and insert the new one
 

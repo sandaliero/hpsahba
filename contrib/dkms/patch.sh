@@ -14,3 +14,7 @@ for PATCH in ../../kernel/"${VERSION}"*/*.patch; do
     echo "Applying ${PATCH}"
     patch --no-backup-if-mismatch -Np3 < "${PATCH}"
 done
+
+echo "Incrementing the module version"
+
+sed -i 's/3.4.20-200/3.4.20-201/g' hpsa.c

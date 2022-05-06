@@ -27,7 +27,11 @@ After that is done, unload the old hpsa driver and insert the new one
 
     sudo modprobe -r hpsa
     sudo modprobe hpsa
+    
+Check if it worked
 
-Or install as follows if do not want this feature enabled
+    lsblk
 
-    sudo modprobe hpsa hpsa_use_nvram_hba_flag=0
+Update initram, (lists some errors on TrueNAS Scale but seems to work)
+
+    update-initramfs -k all -u
